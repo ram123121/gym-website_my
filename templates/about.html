@@ -1,0 +1,243 @@
+{% include "header.html" %}
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+ <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Timing</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ url_for('about') }}"></a></li>
+                        <li><a href="{{ url_for('timing') }}"></a></li>
+                        <li><a href="{{ url_for('contact') }}"></a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+      
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+           
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="{{ url_for('home') }}">
+                            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li class="active"><a href="{{ url_for('about') }}">About Us</a></li>
+                            <li><a href="{{ url_for('timing') }}">Timing</a></li>
+                            <li><a href="{{ url_for('services') }}">Services</a></li>
+                            
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="{{ url_for('about') }}">About us</a></li>
+                                    <li><a href="{{ url_for('timing') }}">Timing</a></li>
+                                    
+                                    
+                                    
+                                    
+                                    <li><a href="{{ url_for('error') }}"></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="static/img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h1 style="color:#f36100">MODERN GYM</h1>
+                        <h2>About us</h2>
+                        <div class="bt-option">
+                            <a href="{{ url_for('home') }}">Home</a>
+                            <span>About</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- ChoseUs Section Begin -->
+    <section class="choseus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>WHY TRAIN WITH US?</span>
+                        <h2>BUILD STRENGTH. BREAK LIMITS.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-034-stationary-bike"></span>
+                        <h4>Modern equipment</h4>
+                        <p>Train with high-performance machines and free weights designed for serious results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-033-juice"></span>
+                        <h4>Custom Nutrition</h4>
+                        <p>Get meal plans that support muscle growth, fat loss, and peak performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-002-dumbell"></span>
+                        <h4>Expert Coaching</h4>
+                        <p>Professional trainers push you harder, correct your form, and keep you progressing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-014-heart-beat"></span>
+                        <h4>Results That Last</h4>
+                        <p>Whether your goal is strength, endurance, or transformation — we build plans around you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- About US Section Begin -->
+    <section class="aboutus-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="about-video set-bg" data-setbg="https://img.magnific.com/free-photo/strong-man-training-gym_1303-23478.jpg?semt=ais_hybrid&w=740&q=80">
+                       
+                                
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <h1 style="color:#f36100">MODERN GYM</h1>
+                            <span>About Us</span>
+                            <h2>What we have done</h2>
+                        </div>
+                        <div class="at-desc">
+                            <p>We help people build strength, improve endurance, and transform their lifestyle through disciplined training and expert guidance. Whether you're a beginner or experienced athlete, our gym is built to push you beyond your limits.</p>
+                        </div>
+                        <div class="about-bar">
+                            <div class="ab-item">
+                                <p>Body building</p>
+                                <div id="bar1" class="barfiller">
+                                    <span class="fill" data-percentage="80"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-item">
+                                <p>Training</p>
+                                <div id="bar2" class="barfiller">
+                                    <span class="fill" data-percentage="85"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-item">
+                                <p>Fitness</p>
+                                <div id="bar3" class="barfiller">
+                                    <span class="fill" data-percentage="75"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About US Section End -->
+
+
+    <!-- Banner Section Begin -->
+    <section class="banner-section set-bg" style="height: 1000px; " data-setbg="https://img.magnific.com/free-photo/kettlebell-dark-gym-with-dramatic-lighting_84443-83772.jpg?semt=ais_hybrid&w=740&q=80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="bs-text">
+                        <h2 style="color: #f36100;">registration now to get more deals</h2>
+                        <div class="bt-tips" style="color: #BBD5DA;">Where health, beauty and fitness meet.</div>
+                        <a href="{{ url_for('contact') }}" class="primary-btn  btn-normal">Contact Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+
+ 
+
+    <!-- Footer Section Begin -->
+    {% include "footer.html" %}
+    <!-- Footer Section End -->

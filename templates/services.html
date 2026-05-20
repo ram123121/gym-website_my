@@ -1,0 +1,210 @@
+{% include 'header.html'%}
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('timing') }}">Timing</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                
+                <li><a href="#">Pages</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ url_for('about') }}">About us</a></li>
+                        <li><a href="{{ url_for('timing') }}">Timing</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('error') }}">404</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li><a href="{{ url_for('home') }}">Home</a></li>
+                            <li><a href="{{ url_for('about') }}">About Us</a></li>
+                            <li><a href="{{ url_for('timing') }}">Timing</a></li>
+                            <li class="active"><a href="{{ url_for('services') }}">Services</a></li>
+                            
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="{{ url_for('about') }}">About us</a></li>
+                                    <li><a href="{{ url_for('timing') }}">Timing</a></li>
+                                    
+                                    <li><a href="{{ url_for('error') }}">404</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="static/img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h1 style="color:#f36100">MODERN GYM</h1>
+                        <h2>Services</h2>
+                        <div class="bt-option">
+                            
+                            <a href="./index.html">Home</a>
+                            <span>Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>What we do?</span>
+                        <h2>PUSH YOUR LIMITS FORWARD</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 order-lg-1 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="static/img/services/services-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-2 col-md-6 p-0">
+                    <div class="ss-text">
+                        <h4>Personal Training</h4>
+                            <p>
+                            Get personal guidance and workout plans based on your fitness goals and experience level.
+                            </p>
+                            <a href="{{ url_for('contact') }}" class="primary-btn  btn-normal">JOIN NOW</a>
+                                                </div>
+                </div>
+                <div class="col-lg-3 order-lg-3 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="static/img/services/services-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-4 col-md-6 p-0">
+                    <div class="ss-text">
+                        <h4>Group Workouts</h4>
+                                <p>
+                                Train together in a motivating environment with cardio, strength, and fitness sessions.
+                                </p>
+                            <a href="{{ url_for('contact') }}" class="primary-btn  btn-normal">JOIN NOW</a>
+                                                </div>
+                </div>
+                <div class="col-lg-3 order-lg-8 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="static/img/services/services-4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-7 col-md-6 p-0">
+                    <div class="ss-text second-row">
+                            <h4>Strength Training</h4>
+                            <p>
+                            Build muscle, improve stamina, and become stronger with proper gym training.
+                            </p>
+                            <a href="{{ url_for('contact') }}" class="primary-btn  btn-normal">JOIN NOW</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-6 col-md-6 p-0">
+                    <div class="ss-pic">
+                        <img src="static/img/services/services-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 order-lg-5 col-md-6 p-0">
+                    <div class="ss-text second-row">
+                        <h4>Strength Training</h4>
+                            <p>
+                            Build muscle, improve stamina, and become stronger with proper gym training.
+                            </p>
+                            <a href="{{ url_for('contact') }}" class="primary-btn  btn-normal">JOIN NOW</a>
+                                                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Banner Section Begin -->
+   <section class="banner-section set-bg" style="height: 1000px; " data-setbg="https://img.magnific.com/free-photo/kettlebell-dark-gym-with-dramatic-lighting_84443-83772.jpg?semt=ais_hybrid&w=740&q=80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="bs-text">
+                        <h2 style="color: #f36100;">registration now to get more deals</h2>
+                        <div class="bt-tips" style="color: #BBD5DA;">Where health, beauty and fitness meet.</div>
+                        <a href="{{ url_for('contact') }}" class="primary-btn  btn-normal">Contact Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+
+    <!-- Pricing Section End -->
+
+ {% include 'footer.html' %}
