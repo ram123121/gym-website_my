@@ -5,7 +5,7 @@ import smtplib
 import os
 app=Flask(__name__)
 app.config["SECRET_KEY"]=os.environ.get("SECRET_KEY")
-PASSWARD=os.environ.get("PASSWARD")
+PASSWORD=os.environ.get("PASSWORD")
 EMAIL=os.environ.get("EMAIL")
 @app.route("/")
 def home():
@@ -21,23 +21,42 @@ def services():
     return render_template("services.html")
 @app.route("/contact",methods=["GET","POST"])
 def contact():
-    name=request.form.get("name")
-    email=request.form.get("email")
-    phone_number=request.form.get("phone_number")
-    comment=request.form.get("comment")
-    print(name,email,phone_number,comment)
+    
     if request.method=="POST":
-        if name=="" or email=="" or phone_number=="" or comment=="":
+        name=request.form.get("name")
+        email=request.form.get("email")
+        phone_number=request.form.get("phone_number")
+        comment=request.form.get("comment")
+        
+        if not name or not email or not phone_number or not comment:
             flash("Please fill all the fields")
-            print("hi")
+            
             return render_template("contact.html")
         
-        with smtplib.SMTP("smtp.gmail.com",587) as smtp:
-            smtp.ehlo()
-            smtp.starttls()
-            smtp.login(EMAIL,PASSWARD)
-            msg=f"Subject:New message from {name}\n\nName:{name}\nEmail:{email}\nPhone number:{phone_number}\nComment:{comment}"
-            smtp.sendmail(EMAIL,EMAIL,msg)
+        try:
+            with smtplib.SMTP("smtp.gmail.com", 587, timeout=10) as smtp:
+                smtp.ehlo()
+                smtp.starttls()
+                smtp.login(EMAIL, PASSWORD)
+
+                msg = f"""Subject: New message from {name}
+
+                    Name: {name}
+                    Email: {email}
+                    Phone number: {phone_number}
+
+                    Comment:
+                    {comment}
+                    """
+
+                smtp.sendmail(EMAIL, EMAIL, msg)
+
+            flash("Message sent successfully")
+            return redirect(url_for("home"))
+
+        except Exception as e:
+            print(e)
+            flash("Something went wrong. Please try again.")
             return redirect(url_for('home')) 
     return render_template("contact.html")
 @app.route("/404")
