@@ -10,7 +10,8 @@ EMAIL = os.environ.get("EMAIL")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
 
 resend.api_key = RESEND_API_KEY
-
+print("EMAIL:", EMAIL)
+print("RESEND_API_KEY:", RESEND_API_KEY)
 
 @app.route("/")
 def home():
